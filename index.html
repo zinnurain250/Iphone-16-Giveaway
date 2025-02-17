@@ -462,21 +462,20 @@ input[type=number]{-moz-appearance:textfield}
 </button>
 
 <script>
-  // URL to be shared
-  const websiteURL = 'https://i-phone-16-roan.vercel.app';
+  // URL to be redirected to
+  const websiteURL = 'https://google.com';
 
-  // WhatsApp share button
+  // WhatsApp button
   document.getElementById('whatsapp').addEventListener('click', function() {
-    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(websiteURL)}`;
-    window.open(whatsappURL, '_blank');
+    window.location.href = websiteURL;
   });
 
-  // Messenger share button
+  // Messenger button
   document.getElementById('messenger').addEventListener('click', function() {
-    const messengerURL = `https://www.facebook.com/dialog/send?link=${encodeURIComponent(websiteURL)}&app_id=YOUR_FACEBOOK_APP_ID&redirect_uri=${encodeURIComponent(websiteURL)}`;
-    window.open(messengerURL, '_blank');
+    window.location.href = websiteURL;
   });
 </script>
+
       </div> 
      </div> 
      <!-- FIN Ventana permiso --> 
