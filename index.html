@@ -453,7 +453,28 @@ input[type=number]{-moz-appearance:textfield}
                c0.677,0.648,1.352,1.295,2.05,1.948c37.257,34.778,67.094,39.369,86.523,34.664c11.019-2.667,19.825-13.365,25.379-22.126
                C336.906,296.467,333.91,288.535,327.115,286.582z" /> 
           </g>
-         </svg> WhatsApp </button><button style="display: flex;align-items: center;justify-content: center;" id="messenger" class="quedate__cta-btn2 js-hidden"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" width="30px"> Messenger</button> </span>
+         </svg> <button style="display: flex;align-items: center;justify-content: center;" id="whatsapp" class="quedate__cta-btn2 js-hidden">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30px"> WhatsApp
+</button>
+
+<button style="display: flex;align-items: center;justify-content: center;" id="messenger" class="quedate__cta-btn2 js-hidden">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" width="30px"> Messenger
+</button>
+
+<script>
+  // URL to be redirected to
+  const websiteURL = 'https://yourwebsite.com';
+
+  // WhatsApp button
+  document.getElementById('whatsapp').addEventListener('click', function() {
+    window.location.href = websiteURL;
+  });
+
+  // Messenger button
+  document.getElementById('messenger').addEventListener('click', function() {
+    window.location.href = websiteURL;
+  });
+</script>
       </div> 
      </div> 
      <!-- FIN Ventana permiso --> 
